@@ -1,0 +1,103 @@
+h1 {
+  text-align: center;
+}
+
+div {
+  font-size: 18pt;
+  text-align: justify;
+}
+
+.grid {
+  text-align: justify;
+  font-size: 0;
+  padding: 4% 4% 0 4%;
+}
+
+.box {
+  display: inline-block;
+  border: .125em solid;
+  text-align: center;
+  width: 25%;
+  margin: 2%;
+  padding: 1%;
+}
+
+.box:nth-child(1)  { background: -webkit-linear-gradient(#FFD81E, #1400D9); }
+.box:nth-child(2)  { background: -webkit-linear-gradient(#2FF, #13F); }
+.box:nth-child(3)  { background: -webkit-linear-gradient(#C20EE8, #FF1A04);
+                     color : #fff; }
+.box:nth-child(2) div { font-family: 'Indie Flower', cursive; }
+.box:nth-child(2) div { font-family: 'times', sans-sarif; }
+.box:nth-child(3) div { font-family: 'Oswald', sans-sarif; }
+
+#link {
+  background-image: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -5px;
+  display: block;
+  margin: 0 auto;
+  text-indent: -9999px;
+  width: 51px;
+  height: 51px;
+}
+
+.facebook-sprite {
+  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -5px;
+  width: 51px;
+  height: 51px;
+  border-width: .125em;
+  border-style: solid;
+}
+
+.facebook-sprite .inner{
+  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -62px;
+  width: 51px;
+  height: 51px;
+  border-width: .125em;
+  border-style: solid;
+  opacity: 0;
+}
+
+.facebook-sprite:hover .inner{
+  opacity: 1;
+}
+
+.twitter-sprite {
+  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -3px -5px;
+  width: 51px;
+  height: 51px;
+  border-width: .125em;
+  border-style: solid;
+}
+
+.twitter-sprite .inner{
+  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -3px -62px;
+  width: 51px;
+  height: 51px;
+  border-width: .125em;
+  border-style: solid;
+  opacity: 0;
+}
+
+.twitter-sprite:hover .inner{
+  opacity: 1;
+}
+
+.instagram-sprite {
+  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -5px;
+  width: 51px;
+  height: 51px;
+  border-width: .125em;
+  border-style: solid;
+}
+
+.instagram-sprite .inner{
+  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -62px;
+  width: 51px;
+  height: 51px;
+  border-width: .125em;
+  border-style: solid;
+  opacity: 0;
+}
+
+.instagram-sprite:hover .inner{
+  opacity: 1;
+}
