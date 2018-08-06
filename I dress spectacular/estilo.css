@@ -8,9 +8,10 @@ div {
 }
 
 .grid {
+  display: flex;
   text-align: justify;
   font-size: 0;
-  padding: 4% 4% 0 4%;
+  padding: 15px;
 }
 
 .box {
@@ -37,23 +38,29 @@ div {
   text-indent: -9999px;
   width: 51px;
   height: 51px;
+
 }
 
 .facebook-sprite {
   background: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -5px;
   width: 51px;
   height: 51px;
-  border-width: .125em;
+  border-width: .1em;
   border-style: solid;
+  display: inline-flex;
+  box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
+  border-radius: 1.2em;
 }
 
 .facebook-sprite .inner{
   background: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -62px;
   width: 51px;
   height: 51px;
-  border-width: .125em;
+  border-width: .1em;
   border-style: solid;
   opacity: 0;
+  box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
+  border-radius: 1.2em;
 }
 
 .facebook-sprite:hover .inner{
@@ -64,17 +71,22 @@ div {
   background: url('imgs/social-media-icons-css-sprite.png') no-repeat -3px -5px;
   width: 51px;
   height: 51px;
-  border-width: .125em;
+  border-width: .1em;
   border-style: solid;
+  display: inline-flex;
+  box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
+  border-radius: 1.2em;
 }
 
 .twitter-sprite .inner{
   background: url('imgs/social-media-icons-css-sprite.png') no-repeat -3px -62px;
   width: 51px;
   height: 51px;
-  border-width: .125em;
+  border-width: .1em;
   border-style: solid;
   opacity: 0;
+  box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
+  border-radius: 1.2em;
 }
 
 .twitter-sprite:hover .inner{
@@ -85,17 +97,23 @@ div {
   background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -5px;
   width: 51px;
   height: 51px;
-  border-width: .125em;
+  border-width: .1em;
   border-style: solid;
+  display: inline-flex;
+  box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
+  border-radius: 1.2em;
+  color: black;
 }
 
 .instagram-sprite .inner{
   background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -62px;
   width: 51px;
   height: 51px;
-  border-width: .125em;
+  border-width: .1em;
   border-style: solid;
   opacity: 0;
+  box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
+  border-radius: 1.2em;
 }
 
 .instagram-sprite:hover .inner{
