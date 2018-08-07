@@ -27,7 +27,7 @@ div {
 .box:nth-child(2)  { background: -webkit-linear-gradient(#2FF, #13F); }
 .box:nth-child(3)  { background: -webkit-linear-gradient(#C20EE8, #FF1A04);
                      color : #fff; }
-.box:nth-child(2) div { font-family: 'Indie Flower', cursive; }
+.box:nth-child(1) div { font-family: 'Indie Flower', cursive; }
 .box:nth-child(2) div { font-family: 'times', sans-sarif; }
 .box:nth-child(3) div { font-family: 'Oswald', sans-sarif; }
 
