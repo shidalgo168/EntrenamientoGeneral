@@ -21,27 +21,27 @@ div {
 }
 
 .spt-facebook {
-  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -5px;
+  background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -60px -5px;
 }
 
 .spt-facebook:hover{
-  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -60px -62px;
+  background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -60px -62px;
 }
 
 .spt-twitter {
-  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -3px -5px;
+  background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -3px -5px;
 }
 
 .spt-twitter:hover {
-  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -3px -62px;
+  background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -3px -62px;
 }
 
 .spt-instagram {
-  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -5px;
+  background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -117px -5px;
 }
 
 .spt-instagram:hover {
-  background: url('imgs/social-media-icons-css-sprite.png') no-repeat -117px -62px;
+  background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -117px -62px;
 }
 
 .sprite {
