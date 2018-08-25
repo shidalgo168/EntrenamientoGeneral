@@ -1,0 +1,55 @@
+.navlist{
+  position: absolute;
+  width: 540px;
+  top:35px;
+  right:3px;	
+  border-top:1px solid #C8C8C8;
+  border-bottom:1px solid #C8C8C8;
+
+  &__item {
+    float: left;
+    margin-left:12px;
+    line-height:normal;
+
+    &--link {
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+      color:#666666;
+      font-weight:normal;
+      display:block;
+      padding-bottom:10px;
+      padding-top:5px;
+      background-color:transparent;
+      margin-top:5px;
+      margin-right:6px;
+      text-decoration:none;
+      &:hover{
+        color:#888;  
+      }
+      &.current{
+        color:#7E7E7E;    
+      }
+    }
+  }
+}
+
+#logo{
+  position:relative;
+  float:left;
+  left:0px;
+  top:34px;
+  width: fit-content;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  
+}
+
+header{
+  position: relative;
+  width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  height:100px;
+      
+}

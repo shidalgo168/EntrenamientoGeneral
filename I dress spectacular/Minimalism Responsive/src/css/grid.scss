@@ -1,0 +1,26 @@
+.row {
+  padding: 0;
+  margin: 0;
+  
+}
+footer {
+  @media screen and (max-width: 800px) {
+    .footer-left-text {
+      left: 20px;
+    }
+
+    .footer-right-text {
+      right: 90px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .footer-left-text {
+      display: none;
+    }
+
+    .footer-right-text {
+      font-size: 13px;
+    }
+  }
+}

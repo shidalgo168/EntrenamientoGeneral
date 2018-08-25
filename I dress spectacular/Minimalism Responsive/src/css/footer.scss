@@ -1,0 +1,35 @@
+@mixin footer-text {
+  position: absolute;
+  top:26px;
+  color:white;
+  font-size:14px;
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+}
+
+footer{
+  position:relative;
+  height:90px;
+  width:100%;
+  background-image:url(images/footer.png);
+  background-repeat:repeat;
+  
+  
+  
+  .footer-left-text {
+    @include footer-text;
+    left: 225px;
+    a {
+      text-decoration:underline;
+      color:#666666;
+    }
+    a:hover {color:#333;
+    }
+  }
+  .footer-right-text{
+    @include footer-text;
+    right: 225px;
+  }
+  
+}
