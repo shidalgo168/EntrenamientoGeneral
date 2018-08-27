@@ -10,34 +10,36 @@
 
   <body>
     <!--start header-->
-    <header>
-      <!--start logo-->
-      <a href="#" id="logo" class="col-sm-4">
-        <img src="images/logo1.png" width="180" height="43" alt="logo">
-      </a>
-      <!--start menu-->
-      <nav class="navlist">
-        <ul>
-          <li class="navlist__item">
-            <a class="navlist__item--link" href="index.html">Home</a>
-          </li>
-          <li class="navlist__item">
-            <a class="navlist__item--link" href="#">About us</a>
-          </li>
-          <li class="navlist__item">
-            <a class="navlist__item--link" href="#">Services</a>
-          </li>
-          <li class="navlist__item">
-            <a class="navlist__item--link" href="#">Portfolio</a>
-          </li>
-          <li class="navlist__item">
-            <a class="navlist__item--link" href="#">News</a>
-          </li>
-          <li class="navlist__item">
-            <a class="navlist__item--link" href="#">Contacts</a>
-          </li>
-        </ul>
-      </nav>
+    <header class="container">
+      <div class="header">
+        <!--start logo-->
+        <a href="#" id="logo">
+          <img src="images/logo1.png" width="180" height="43" alt="logo">
+        </a>
+        <!--start menu-->
+        <nav class="navlist">
+          <ul>
+            <li class="navlist__item">
+              <a class="navlist__item--link" href="index.html">Home</a>
+            </li>
+            <li class="navlist__item">
+              <a class="navlist__item--link" href="#">About us</a>
+            </li>
+            <li class="navlist__item">
+              <a class="navlist__item--link" href="#">Services</a>
+            </li>
+            <li class="navlist__item">
+              <a class="navlist__item--link" href="#">Portfolio</a>
+            </li>
+            <li class="navlist__item">
+              <a class="navlist__item--link" href="#">News</a>
+            </li>
+            <li class="navlist__item">
+              <a class="navlist__item--link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!--start body content-->
     <div class="container">
@@ -56,67 +58,67 @@
       </div>
       <!--start column-->
       <div class="row">
-        <div class="col-sm-4">
-          <section class="group1">
-            <h3>About us</h3>
-            <p>
+        <div class="col-md-4">
+          <section class="image-col image-col--first">
+            <p class="image-col__title">About us</p>
+            <p class="image-col__text">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
               Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.
             </p>
-            <a class="photo_hover" href="#">
-              <img src="images/picture1.jpg" width="343" height="305" alt="picture1">
+            <a class="image-col__photo"href="#">
+              <img src="images/picture1.jpg" class="raw-image" alt="picture1">
             </a>
             <a href="#">
               <span class="button">Read more</span>
             </a>
           </section>
         </div>
-        <div class="col-sm-4">
-          <section class="group2">
-            <h3>Services</h3>
-            <p>
+        <div class="col-md-4">
+          <section class="image-col image-col--second">
+            <p class="image-col__title">Services</p>
+            <p class="image-col__text">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
               Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.
             </p>
-            <a class="photo_hover" href="#">
-              <img src="images/picture2.jpg" width="343" height="305" alt="picture1">
+            <a class="image-col__photo" href="#">
+              <img src="images/picture2.jpg" class="raw-image" alt="picture2">
             </a>
             <a href="#">
               <span class="button">Read more</span>
             </a>
           </section>
         </div>
-        <div class="col-sm-4">
-          <section class="group3">
-            <h3>Latest news</h3>
-            <p>
+        <div class="col-md-4">
+          <section class="image-col image-col--last">
+            <p class="image-col__title">Latest news</p>
+            <p class="image-col__text">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin.                   Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.   
             </p>
-            <a class="photo_hover" href="#">
-              <img src="images/picture3.jpg" width="343" height="305" alt="picture1">
+            <a class="image-col__photo" href="#">
+              <img src="images/picture3.jpg" class="raw-image" alt="picture3">
             </a>
             <a href="#">
               <span class="button">Read more</span>
             </a>
           </section>
         </div>
-        <div class="col-sm-12">
-          <section class="group4">
-            <h4>Last Article</h4>
+        <div class="col-md-12">
+          <section class="final-block">
+            <p class="final-block__title">Last Article</p>
             <article>
-              <h5>27.08.2014 - Design is how it works </h5>
-              <p>
+              <p class="final-block__subtitle">27.08.2014 - Design is how it works </p>
+              <p class="final-block__text">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
                   Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.     
               </p>
-              <div class="holder_content1b">
-                <div class="pulledquote">
+              <div class="final-block__quoteblock">
+                <div class="final-block__quoteblock--pulledquote">
                   <blockquote>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.
                   </blockquote>
                 </div>
               </div>
-              <div class="holder_content1a">
+              <div class="final-block__endblock">
                 <p>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
                   Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 

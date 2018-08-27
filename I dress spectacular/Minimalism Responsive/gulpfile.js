@@ -8,8 +8,8 @@ var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
 gulp.task('sass', function () {
 	gulp.src(['./src/css/main.scss', './src/css/background.scss', 
-	'./src/css/header.scss', './src/css/grid.scss', './src/css/footer.scss', 
-	'./src/css/buttons.scss', './src/css/content.scss', './src/css/gallery.scss'])
+	'./src/css/header.scss', './src/css/footer.scss', './src/css/buttons.scss', 
+	'./src/css/body-content.scss', './src/css/gallery.scss', './src/css/grid.scss'])
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(cssnano())

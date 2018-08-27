@@ -1,10 +1,10 @@
 .navlist{
-  position: absolute;
-  width: 540px;
-  top:35px;
-  right:3px;	
+  position: relative;
+  right:3px;
+  top: 1px;
   border-top:1px solid #C8C8C8;
   border-bottom:1px solid #C8C8C8;
+  flex-basis: 540px;
 
   &__item {
     float: left;
@@ -37,19 +37,17 @@
   position:relative;
   float:left;
   left:0px;
-  top:34px;
-  width: fit-content;
-  width: fit-content;
   margin: 0;
   padding: 0;
   
 }
 
-header{
-  position: relative;
-  width: 1140px;
-  margin-right: auto;
-  margin-left: auto;
-  height:100px;
+.header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;;
       
 }
