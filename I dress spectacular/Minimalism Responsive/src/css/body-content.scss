@@ -1,132 +1,116 @@
 //Content of the page except the image block
-%header-values {
-  font-weight: normal;
-	position: relative;
-}
-
-%text-values {
-  color: #575757;
-  font-size: 15px;
-}
+@import "_variables.scss";
 
 .intro{
-  width:100%;
-  position: relative;
-  float: left;
-  background:transparent;
-  margin-top:0;
-  margin-bottom:20px;
+  width : 100%;
+  position : relative;
+  float : left;
+  background : transparent;
+  margin-top : 0;
+  margin-bottom : 20px;
+  
 
   &__title {
     @extend %header-values;
-    font-size:42px;
-    line-height:1.5em;
-    color:#666666;
-    text-align:left;
-    padding-top:13px;
-    font-weight:600;
+    font-size:34px;
+    line-height : 1.5em;
+    font-weight : 600;
+    padding: 10px;
   }
   &__quoteby {
-    font-size: 25px;
-    color:#666666;
-    margin-left:10px;
+    font-size : 25px;
+    color : $text-color;
+    margin-left : 10px;
   }
 
   &__subtitle {
     @extend %header-values;
-    font-size: 15px;
-    line-height:1.6em;
-    color:#666;
-    text-align:left;
-    border-bottom:1px solid #C8C8C8;
-    margin-top:7px;
-    padding-bottom:18px;
+    font-size : 15px;
+    line-height : 1.6em;
+    border-bottom : $border-line;
+    margin-top : 7px;
+    padding: 10px;
 
     &--link {
-      text-decoration: underline;
-      color:#666;
+      text-decoration : underline;
+      color : $text-color;
 
       &:hover{
-        color:#333;  
+        color : $linkhover-color;  
       }
-
-    }
-
-  }
-
-}
-
-.col-md-12 {
-  padding: 0;
-  .final-block {
-    background:transparent;
-    margin-bottom:30px;
-    margin-top:5px;
-    float:left;
-    border-top:1px solid #C8C8C8;
-    @extend %header-values;
-
-    &__title {
-      font-size: 22px;
-      line-height:1.3em;
-      color:#CC3333;
-      text-align:left;
-      margin-top:26px;
-      padding-bottom:5px;
-      margin-bottom:13px;
-    }
-
-    &__subtitle {
-      font-size: 14px;
-      line-height:1.3em;
-      color:#666666;
-      text-align:left;
-      margin-bottom:8px;
-      padding-top:3px;
-      font-weight:600;
-    }
-
-    &__text {
-      @extend %text-values;
-    }
-
-    &__quoteblock {
-      float: left;
-      width: 100%;
-      margin-top: 20px;
-      margin-bottom: 20px;
-
-      &--pulledquote{
-        background: #ededed;
-        border: 1px solid #C8C8C8;
-        color: #c33;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-        font-weight: bold;
-        font-size: 92%;
-        padding: 16px;
-        width: 96%;
-        margin-left: 0;
-  
-        blockquote {
-          display: block;
-          -webkit-margin-before: 1em;
-          -webkit-margin-after: 1em;
-          -webkit-margin-start: 40px;
-          -webkit-margin-end: 40px;
-        }
-      }
-    }
-
-    &__endblock {
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: 20px;
-      @extend %text-values;
     }
   }
 }
+
+.final-block {
+  background : transparent;
+  margin-bottom : 30px;
+  margin-top : 5px;
+  float : left;
+  border-top : $border-line;
+  @extend %header-values;
+  text-align : left;
+  padding: 10px;
+
+  &__title {
+    font-size : 22px;
+    line-height : 1.3em;
+    color : $title-color;
+    margin-top : 26px;
+    padding-bottom : 5px;
+    margin-bottom : 13px;
+  }
+
+  &__subtitle {
+    font-size : 14px;
+    line-height : 1.3em;
+    color : $text-color;
+    margin-bottom : 8px;
+    padding-top : 3px;
+    font-weight : 600;
+  }
+
+  &__text {
+    @extend %text-values;
+  }
+
+  &__quoteblock {
+    float : left;
+    width : 100%;
+    margin-top : 20px;
+    margin-bottom : 20px;
+
+    &--pulledquote{
+      background : $quote-background;
+      border : $border-line;
+      color : $title-color;
+      margin-top : 20px;
+      margin-bottom : 20px;
+      font-family : Palatino, sans-serif;
+      font-weight : bold;
+      font-size : 92%;
+      padding : 16px;
+      width : 96%;
+      margin-left : 0;
+
+      .quote {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 40px;
+        -webkit-margin-end: 40px;
+      }
+    }
+  }
+
+  &__endblock {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    @extend %text-values;
+  }
+}
+
 
 
 
