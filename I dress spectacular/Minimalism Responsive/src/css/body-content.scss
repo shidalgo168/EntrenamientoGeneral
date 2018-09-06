@@ -79,28 +79,6 @@
     width : 100%;
     margin-top : 20px;
     margin-bottom : 20px;
-
-    &__quotebox{
-      background : $quote-background;
-      border : $border-line;
-      color : $title-color;
-      margin-top : 20px;
-      margin-bottom : 20px;
-      font-family : Palatino, sans-serif;
-      font-weight : bold;
-      font-size : 92%;
-      padding : 16px;
-      width : 96%;
-      margin-left : 0;
-
-      &__text {
-        display: block;
-        -webkit-margin-before: 1em;
-        -webkit-margin-after: 1em;
-        -webkit-margin-start: 40px;
-        -webkit-margin-end: 40px;
-      }
-    }
   }
 
   &__endblock {
@@ -108,6 +86,27 @@
     margin-top: 0;
     margin-bottom: 20px;
     @extend %text-values;
+  }
+}
+
+.quotebox{
+  background : $quote-background;
+  border : $border-line;
+  color : $title-color;
+  margin-top : 20px;
+  margin-bottom : 20px;
+  font-family : Palatino, sans-serif;
+  font-weight : bold;
+  font-size : 92%;
+  padding : 16px;
+  width : 96%;
+  margin-left : 0;
+  &__text {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
   }
 }
 
