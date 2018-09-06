@@ -74,13 +74,13 @@
     @extend %text-values;
   }
 
-  &__quoteblock {
+  &__quotesection {
     float : left;
     width : 100%;
     margin-top : 20px;
     margin-bottom : 20px;
 
-    &--pulledquote{
+    &__quotebox{
       background : $quote-background;
       border : $border-line;
       color : $title-color;
@@ -93,7 +93,7 @@
       width : 96%;
       margin-left : 0;
 
-      .quote {
+      &__text {
         display: block;
         -webkit-margin-before: 1em;
         -webkit-margin-after: 1em;
