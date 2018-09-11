@@ -1,0 +1,63 @@
+@import "_variables.scss";
+
+.image-col {
+  background:transparent;
+  margin-bottom:30px;
+  margin-top:22px;
+  float:left;
+  position:relative;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 100%;
+  padding: 10px;
+
+  &__title {
+    font-weight: normal;
+    font-size: 22px;
+    line-height:1.3em;
+    color:$title-color;
+    text-align:left;
+    margin-bottom:6px;
+    padding-bottom:5px;
+    font-weight:600;
+  }
+
+  &__text {
+    color : $paragraph-color;
+  }
+
+  &__photo {
+    position:relative;
+    float: left;
+    margin:16px 13px 8px 0;
+    padding: 8px;
+    background-color:white;
+    border: $border-line;
+    &:hover {
+      background-color:transparent;
+      opacity:0.9;
+    }
+  }
+
+  &--first {
+    padding-right: 20px;
+  }
+
+  &--second {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  &--last {
+    padding-left: 20px;
+  }
+
+}
+
+
+.raw-image {
+  width: 315px;
+  height: 280px; 
+}
+
+
+

@@ -1,0 +1,20 @@
+$text-color : #666;
+$title-color : #C33;
+$linkhover-color : #333; 
+$border-line : 1px solid #C8C8C8;
+$quote-background : #EDEDED;
+$nav-item-color : #888;
+$nav-item-hover-color : #7E7E7E;
+$paragraph-color : #575757;
+
+%text-values {
+  color: $paragraph-color;
+  font-size: 15px;
+}
+
+%header-values {
+  font-weight: normal;
+  position: relative;
+  text-align:left;
+  color : $text-color;
+}
