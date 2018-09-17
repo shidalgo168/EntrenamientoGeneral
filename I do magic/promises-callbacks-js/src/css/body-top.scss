@@ -1,0 +1,44 @@
+@import "_variables.scss";
+
+.image {
+  @extend %flex-container;
+  justify-content: flex-end;
+  height: 304px;
+  width: auto;
+}
+
+.title {
+  position: relative;
+  width: 238px;
+  left: calc(50% - 238px/2 - 34px);
+  top: 10px;
+
+  @extend %text-common;
+  font-size: 24px;
+  color: black;
+}
+
+.searchbar {
+  position: relative;
+  top: 15px;
+  @extend %flex-container;
+  justify-content:center;
+  align-items: center;
+
+  &__textfield {
+    height: 44px;
+    width: 290px;
+    
+    background: white;
+    @extend %light-border;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  &__search-button {
+    width: 30px;
+  }
+}
+
+
+

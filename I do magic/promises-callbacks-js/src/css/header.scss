@@ -1,0 +1,113 @@
+@import "_variables.scss";
+
+@font-face {
+  font-family: "MyNeuropol";
+  src: url(Fonts/neuropol.otf) format("truetype");
+}
+
+.header {
+  position: relative;
+  height: 77px;
+  left: 0%;
+  right: 0%;
+  top: 0px;
+  background: black;
+}
+
+%title-text {
+  position: absolute;
+  font-family: "MyNeuropol";
+  line-height: normal;
+  font-size: 28.354px;
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  width: 195px;
+  height: 61px;
+  left: 5%;
+  top: 17%;
+
+  &__text-agentes {
+    @extend %title-text;
+    left: 15.9%;
+    right: 0%;
+    top: 42.62%;
+    bottom: 0%;
+  }
+
+  &__text-super {
+    @extend %title-text;
+    left: 0%;
+    right: 42.05%;
+    top: 0%;
+    bottom: 42.62%;
+  }
+}
+
+.crosshair {
+  position: absolute;
+  left: 57.95%;
+  right: 26.67%;
+  top: 4.92%;
+  bottom: 45.9%;
+  @extend %flex-container;
+  align-items: center;
+
+  &__vertical-line {
+    position: absolute;
+    left: 50%;
+    top: 1%;
+    bottom: 45.9%;
+    height: 30px;
+
+    @extend %crosshair-border;
+  }
+
+  &__horizontal-line {
+    position: absolute;
+    left: 1%;
+    width: 30px;
+
+    @extend %crosshair-border;
+  }
+
+  &__circle {
+    position: absolute;
+    left: 17.7%;
+    top : 14%;
+    right: 28.72%;
+    height: 21.55px;
+    width: 21.55px;
+
+    @extend %crosshair-border;
+    border-radius: 10px;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  width: 53px;
+  height: 43px;
+  right: 5.5%;
+  top: 22%;
+
+  &__rectangle-top {
+    @extend %menu-rectangle;
+    top: 0%;
+    bottom: 79.07%;
+  }
+
+  &__rectangle-mid {
+    @extend %menu-rectangle;
+    top: 39.53%;
+    bottom: 39.53%;
+  }
+
+  &__rectangle-bottom {
+    @extend %menu-rectangle;
+    top: 79.07%;
+    bottom: 0%;
+  }
+}
