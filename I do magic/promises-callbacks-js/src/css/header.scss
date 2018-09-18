@@ -26,7 +26,7 @@
   position: absolute;
   width: 195px;
   height: 61px;
-  left: 5%;
+  left: 20px;
   top: 17%;
 
   &__text-agentes {
@@ -90,7 +90,7 @@
   position: absolute;
   width: 53px;
   height: 43px;
-  right: 5.5%;
+  right: 20px;
   top: 22%;
 
   &__rectangle-top {
@@ -109,5 +109,53 @@
     @extend %menu-rectangle;
     top: 79.07%;
     bottom: 0%;
+  }
+}
+
+%options-values {
+  @extend %text-common;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.options {
+  position: absolute;
+  width: 400px;
+  height: fit-content;
+  right: 20px;
+  top: 33%;
+  display: none;
+  @extend %flex-container;
+  &__directory {
+    @extend %options-values;
+    &--selected {
+      background: white;
+      height: 6px;
+      width: inherit;
+    }
+  }
+  &__contact {
+    @extend %options-values;
+    &--selected {
+      display: none;
+      background: white;
+      height: 6px;
+      width: inherit;
+    }
+  }
+  &__login {
+    padding-left: 20px;
+    @extend %options-values;
+    &--selected {
+      display: none;
+      background: white;
+      height: 6px;
+      width: inherit;
+    }
   }
 }

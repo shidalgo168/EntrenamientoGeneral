@@ -9,7 +9,7 @@ var cssnano = require('gulp-cssnano');
 gulp.task('sass', function () {
 	gulp.src(['./src/css/main.scss', './src/css/header.scss', 
 	'./src/css/body-top.scss', './src/css/body.scss', 
-	'./src/css/footer.scss'])
+	'./src/css/footer.scss', './src/css/grid.scss'])
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(cssnano())

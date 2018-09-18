@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Super Agentes - Home</title>
     <!--Bootstrap grid-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
 
@@ -25,36 +24,66 @@
         <div class="menu-button__rectangle-mid"></div>
         <div class="menu-button__rectangle-bottom"></div>
       </div>
+      <div class="options">
+        <a class="options__directory" href="">
+          Directorio de Agentes
+          <div class="options__directory--selected"></div>
+        </a>
+        <a class="options__contact" href="">
+          Contacto
+          <div class="options__contact--selected"></div>
+        </a>
+        <a class="options__login" href="">
+          Ingresar
+          <div class="options__login--selected"></div>
+        </a>
+      </div>
+
     </header>
     <!--start body content-->
+
+    <script>
+      function createCORSRequest(method, url) {
+        var xhr = new XMLHttpRequest();
+        if ("withCredentials" in xhr) {
+
+          // Check if the XMLHttpRequest object has a "withCredentials" property.
+          // "withCredentials" only exists on XMLHTTPRequest2 objects.
+          xhr.open(method, url, true);
+          xhr.send();
+
+        } else if (typeof XDomainRequest != "undefined") {
+
+          // Otherwise, check if XDomainRequest.
+          // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+          xhr = new XDomainRequest();
+          xhr.open(method, url);
+          xhr.send();
+
+        } else {
+
+          // Otherwise, CORS is not supported by the browser.
+          xhr = null;
+
+        }
+        return xhr;
+      }
+    </script>
     <div class="body-content">
-      <div class="image">
-        <img src="images/banner-mobile.png" alt="banner">
-      </div>
+      <div class="image"></div>
       <div class="title">Los Mejores agentes de seguridad</div>
       <div class="searchbar">
           <input type="text" class="searchbar__textfield" value=" Buscar por Ubicación" name="Location">
-          <input type="image" src="images/search.png" class="searchbar__search-button">
+          <input type="image" src="images/search.png" class="searchbar__search-button" onclick="createCORSRequest('GET', 'https://akurey.com/trainings/companies.json')">
       </div>
-      <div class="agent-section">
+      <div id="agent-section">
         <div class="agent">
-          <p class="agent__name">Chuck Norris Bodyguards</p>
+          <p class="agent__name" id="FirstName">{{name}}</p>
           <img src="images/certified.png" alt="ribbon" class="agent__ribbon">
           <div class="agent__separator"></div>
-          <img class="agent__photo">
-          <div class="agent__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.</div>
-          <div class="agent__price">Desde: $15 / 12 horas</div>
-          <div class="agent__button">
-            <div class="agent__button-text">Contratar</div>
-          </div>
-        </div>
-        <div class="agent">
-          <p class="agent__name">Chuck Norris Bodyguards</p>
-          <img src="images/certified.png" alt="ribbon" class="agent__ribbon">
-          <div class="agent__separator"></div>
-          <img class="agent__photo">
-          <div class="agent__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.</div>
-          <div class="agent__price">Desde: $15 / 12 horas</div>
+          <img class="agent__photo" src="{{image}}">
+          <div class="agent__description">{{description}}</div>
+          <div class="agent__price">Desde: ${{rate}} / {{hours}} horas</div>
           <div class="agent__button">
             <div class="agent__button-text">Contratar</div>
           </div>

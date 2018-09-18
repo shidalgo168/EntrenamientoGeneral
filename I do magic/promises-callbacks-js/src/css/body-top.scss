@@ -2,9 +2,10 @@
 
 .image {
   @extend %flex-container;
-  justify-content: flex-end;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('images/banner-mobile.png');
   height: 304px;
-  width: auto;
 }
 
 .title {
