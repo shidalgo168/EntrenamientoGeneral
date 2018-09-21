@@ -6,10 +6,16 @@ var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
+
+var DIST = 'dist';
+
+var dist = function(subpath) {
+	return !subpath ? DIST : path.join(DIST, subpath);
+};
+
 gulp.task('sass', function () {
-	gulp.src(['./src/css/main.scss', './src/css/header.scss', 
-	'./src/css/body-top.scss', './src/css/body.scss', 
-	'./src/css/footer.scss', './src/css/grid.scss'])
+	gulp.src(['./src/css/header.scss','./src/css/body-top.scss'
+					, './src/css/body.scss', './src/css/footer.scss', './src/css/grid.scss'])
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(cssnano())
@@ -50,9 +56,25 @@ gulp.task('html', function () {
 		}));
 });
 
+// Copy all files at the root level (app)
+gulp.task('copyImages', function() {
+	gulp.src([
+		'./src/images/*',
+	]).pipe(gulp.dest("./dist/images"))
+	.pipe(reload({
+		stream: true
+	}));
+});
+
+// Copy all files at the root level (app)
+gulp.task('copyJsFiles', function() {
+	gulp.src([
+		'./src/js/*',
+	]).pipe(gulp.dest("./dist/js"))
+	.pipe(reload({
+		stream: true
+	}));
+});
 
 // Default task
-gulp.task('default', ['sass', 'html', 'watch', 'serve']);
-
-
-
+gulp.task('default', ['sass', 'html', 'watch', 'serve', 'copyImages', 'copyJsFiles']);

@@ -1,12 +1,16 @@
 @import "_variables.scss";
 
+body {
+  margin: 0;
+}
+
 .body-content {
   position: relative;
   min-height: 700px;
   background: white;
 }
 
-.agent-section {
+#agent-section {
   position: relative;
   height: fit-content;
   top: 20px;
@@ -17,7 +21,7 @@
   position: relative;
   width: 360px;
   height: 300px;
-  top: 15px;
+  top: 25px;
   background: white;
 
   &__name {
@@ -26,6 +30,7 @@
     top: 5px;
     @extend %text-common;
     font-size: 18px;
+    margin: 0;
   }
 
   &__ribbon {

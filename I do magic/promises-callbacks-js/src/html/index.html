@@ -5,20 +5,34 @@
     <title>Super Agentes - Home</title>
     <!--Bootstrap grid-->
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.min.js"></script>
+
+    <script type="text/x-handlebars-template" id="template">
+      {{#companies}}
+        <div class="agent">
+          <p class="agent__name">{{name}}</p>
+          {{#isCertified}}
+          <img src="images/certified.png" alt="ribbon" class="agent__ribbon">
+          {{/isCertified}}
+          <div class="agent__separator"></div>
+          <img class="agent__photo" src="{{image}}">
+          <div class="agent__description">{{description}}</div>
+          <div class="agent__price">Desde: ${{rate}} / {{hours}} horas</div>
+          <div class="agent__button">
+            <div class="agent__button-text">Contratar</div>
+          </div>
+        </div>
+      {{/companies}}
+    </script>
+
+    <script type="text/javascript" src="js/load-data.js"></script>
   </head>
 
   <body>
     <!--start header-->
     <header class="header">
-      <div class="logo">
-        <div class="logo__text-super">Super</div>
-        <p class="logo__text-agentes">Agentes</p>
-        <div class="crosshair">
-          <div class="crosshair__vertical-line"></div>
-          <div class="crosshair__horizontal-line"></div>
-          <div class="crosshair__circle"></div>
-        </div>
-      </div>
+      <div class="logo"></div>
       <div class="menu-button">
         <div class="menu-button__rectangle-top"></div>
         <div class="menu-button__rectangle-mid"></div>
@@ -41,53 +55,14 @@
 
     </header>
     <!--start body content-->
-
-    <script>
-      function createCORSRequest(method, url) {
-        var xhr = new XMLHttpRequest();
-        if ("withCredentials" in xhr) {
-
-          // Check if the XMLHttpRequest object has a "withCredentials" property.
-          // "withCredentials" only exists on XMLHTTPRequest2 objects.
-          xhr.open(method, url, true);
-          xhr.send();
-
-        } else if (typeof XDomainRequest != "undefined") {
-
-          // Otherwise, check if XDomainRequest.
-          // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
-          xhr = new XDomainRequest();
-          xhr.open(method, url);
-          xhr.send();
-
-        } else {
-
-          // Otherwise, CORS is not supported by the browser.
-          xhr = null;
-
-        }
-        return xhr;
-      }
-    </script>
     <div class="body-content">
       <div class="image"></div>
       <div class="title">Los Mejores agentes de seguridad</div>
       <div class="searchbar">
-          <input type="text" class="searchbar__textfield" value=" Buscar por Ubicación" name="Location">
-          <input type="image" src="images/search.png" class="searchbar__search-button" onclick="createCORSRequest('GET', 'https://akurey.com/trainings/companies.json')">
+          <input type="text" class="searchbar__textfield" placeholder=" Buscar por Ubicación" name="Location">
+          <input type="image" src="images/search.png" class="searchbar__search-button" onclick="getAgents('https://api.myjson.com/bins/uptto')">
       </div>
       <div id="agent-section">
-        <div class="agent">
-          <p class="agent__name" id="FirstName">{{name}}</p>
-          <img src="images/certified.png" alt="ribbon" class="agent__ribbon">
-          <div class="agent__separator"></div>
-          <img class="agent__photo" src="{{image}}">
-          <div class="agent__description">{{description}}</div>
-          <div class="agent__price">Desde: ${{rate}} / {{hours}} horas</div>
-          <div class="agent__button">
-            <div class="agent__button-text">Contratar</div>
-          </div>
-        </div>
       </div>
     </div>
     <!--start footer-->
@@ -95,5 +70,6 @@
       <p class="credits">Desarrollado por Akurey.com Todos los derechos reservados.</p>
       <a href="" class="terms">Términos y Condiciones</a>
     </footer>
+
   </body>
 </html>

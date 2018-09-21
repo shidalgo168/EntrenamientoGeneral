@@ -10,38 +10,38 @@
 */
 
 .menu-button {
-  @media screen and (min-width: 360px) {}
+  @media(min-width: 360px) {}
   
-  @media screen and (min-width: 1024px) {
+  @media(min-width: 1024px) {
     display: none;
   }
 }
 
 .options {
-  @media screen and (min-width: 360px) {}
+  @media(min-width: 360px) {}
 
-  @media screen and (min-width: 1024px) {
+  @media(min-width: 1024px) {
     display: flex;
   }
 }
 
 
 .image {
-  @media screen and (min-width: 360px) {}
+  @media(min-width: 360px) {}
 
-  @media screen and (min-width: 768px) {
+  @media(min-width: 768px) {
     height: 428px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media(min-width: 1024px) {
     background-image: url('images/banner.png');
   }
 }
 
 .title {
-  @media screen and (min-width: 360px) {}
+  @media(min-width: 360px) {}
 
-  @media screen and (min-width: 768px) {
+  @media(min-width: 768px) {
     position: absolute;
     font-size: 36px;
     line-height: 42px;
@@ -51,16 +51,16 @@
     width: 360px
   }
 
-  @media screen and (min-width: 1024px) {
+  @media(min-width: 1024px) {
     top: 235px;
     width: 595px;
   }
 }
 
 .searchbar {
-  @media screen and (min-width: 360px) {}
+  @media(min-width: 360px) {}
 
-  @media screen and (min-width: 768px) {
+  @media(min-width: 768px) {
     position: absolute;
     top: 330px;
     left: 8%;
@@ -70,7 +70,7 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media(min-width: 1024px) {
     top: 295px;
     &__textfield {
       width: 540px;
@@ -79,28 +79,29 @@
 }
 
 .footer {
-  @media screen and (min-width: 360px) {}
+  @media(min-width: 360px) {}
 
-  @media screen and (min-width: 768px) {
+  @media(min-width: 768px) {
     height: 60px;
   }
 }
 
 .credits {
-  @media screen and (min-width: 360px) {}
+  @media(min-width: 360px) {}
 
-  @media screen and (min-width: 768px) {
+  @media(min-width: 768px) {
     position: absolute;
     width: auto;
     left: 5%;
     top: 40%;
+    margin: 0;
   }
 }
 
 .terms {
-  @media screen and (min-width: 360px) {}
+  @media(min-width: 360px) {}
   
-  @media screen and (min-width: 768px) {
+  @media(min-width: 768px) {
     position: absolute;
     width: auto;
     left: 75%;

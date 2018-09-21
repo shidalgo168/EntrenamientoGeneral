@@ -1,10 +1,5 @@
 @import "_variables.scss";
 
-@font-face {
-  font-family: "MyNeuropol";
-  src: url(Fonts/neuropol.otf) format("truetype");
-}
-
 .header {
   position: relative;
   height: 77px;
@@ -14,76 +9,13 @@
   background: black;
 }
 
-%title-text {
-  position: absolute;
-  font-family: "MyNeuropol";
-  line-height: normal;
-  font-size: 28.354px;
-  color: white;
-}
-
 .logo {
   position: absolute;
-  width: 195px;
-  height: 61px;
+  width: 200px;
+  height: 60px;
   left: 20px;
   top: 17%;
-
-  &__text-agentes {
-    @extend %title-text;
-    left: 15.9%;
-    right: 0%;
-    top: 42.62%;
-    bottom: 0%;
-  }
-
-  &__text-super {
-    @extend %title-text;
-    left: 0%;
-    right: 42.05%;
-    top: 0%;
-    bottom: 42.62%;
-  }
-}
-
-.crosshair {
-  position: absolute;
-  left: 57.95%;
-  right: 26.67%;
-  top: 4.92%;
-  bottom: 45.9%;
-  @extend %flex-container;
-  align-items: center;
-
-  &__vertical-line {
-    position: absolute;
-    left: 50%;
-    top: 1%;
-    bottom: 45.9%;
-    height: 30px;
-
-    @extend %crosshair-border;
-  }
-
-  &__horizontal-line {
-    position: absolute;
-    left: 1%;
-    width: 30px;
-
-    @extend %crosshair-border;
-  }
-
-  &__circle {
-    position: absolute;
-    left: 17.7%;
-    top : 14%;
-    right: 28.72%;
-    height: 21.55px;
-    width: 21.55px;
-
-    @extend %crosshair-border;
-    border-radius: 10px;
-  }
+  background-image: url("images/logo.png");
 }
 
 .menu-button {
@@ -112,17 +44,6 @@
   }
 }
 
-%options-values {
-  @extend %text-common;
-  font-size: 14px;
-  text-align: center;
-  color: white;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
-}
-
 .options {
   position: absolute;
   width: 400px;
@@ -134,18 +55,14 @@
   &__directory {
     @extend %options-values;
     &--selected {
-      background: white;
-      height: 6px;
-      width: inherit;
+      @extend %selected-tab;
     }
   }
   &__contact {
     @extend %options-values;
     &--selected {
       display: none;
-      background: white;
-      height: 6px;
-      width: inherit;
+      @extend %selected-tab;
     }
   }
   &__login {
@@ -153,9 +70,7 @@
     @extend %options-values;
     &--selected {
       display: none;
-      background: white;
-      height: 6px;
-      width: inherit;
+      @extend %selected-tab;
     }
   }
 }
