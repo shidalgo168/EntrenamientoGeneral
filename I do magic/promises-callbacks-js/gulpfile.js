@@ -41,6 +41,8 @@ gulp.task('serve', function () {
 gulp.task('watch', function () {
 	gulp.watch("./src/css/**", ['sass']);
 	gulp.watch("./src/html/**", ['html']);
+	gulp.watch("./src/images/**", ['copyImages']);
+	gulp.watch("./src/js/**", ['copyJsFiles']);
 });
 
 // HTML generation task
@@ -56,7 +58,7 @@ gulp.task('html', function () {
 		}));
 });
 
-// Copy all files at the root level (app)
+// Copy all assets at the root level (app)
 gulp.task('copyImages', function() {
 	gulp.src([
 		'./src/images/*',
@@ -66,7 +68,7 @@ gulp.task('copyImages', function() {
 	}));
 });
 
-// Copy all files at the root level (app)
+// Copy all javascript files at the root level (app)
 gulp.task('copyJsFiles', function() {
 	gulp.src([
 		'./src/js/*',

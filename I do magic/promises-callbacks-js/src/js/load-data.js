@@ -36,20 +36,13 @@ function getAgents(url){
     var userInput = document.getElementsByName("Location")[0].value;
     var data = JSON.parse(response);
     if (userInput){
-      console.log(data);
-      console.log(userInput);
       userInput = userInput.toUpperCase();
-      console.log(userInput);
       var newFilter = {"companies" : []};
-      console.log(newFilter);
-      console.log("---------------------");
       for(var i = 0; i < data.companies.length; i++){
-        console.log(i);
         if(data.companies[i].name.toUpperCase().includes(userInput)){
           newFilter.companies.push(data.companies[i]);
         }
       }
-      console.log(newFilter);
       var html = Mustache.to_html(templateX, newFilter);
     }else{
       var html = Mustache.to_html(templateX, data);
