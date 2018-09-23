@@ -30,10 +30,14 @@ function get(url) {
 }
 
 function getAgents(url){
-  
   get(url).then(function(response) {
-    var templateX = $('#template').html();
+    //getting mustache template
+    var templateX = document.getElementById('template').innerHTML;
+
+    //getting user input
     var userInput = document.getElementsByName("Location")[0].value;
+
+    //filtering the data
     var data = JSON.parse(response);
     if (userInput){
       userInput = userInput.toUpperCase();
@@ -43,13 +47,16 @@ function getAgents(url){
           newFilter.companies.push(data.companies[i]);
         }
       }
-      var html = Mustache.to_html(templateX, newFilter);
-    }else{
-      var html = Mustache.to_html(templateX, data);
+      //converting the data into mustache template objects
+      var agents = Mustache.render(templateX, newFilter);
     }
-  $('#agent-section').html(html);
-}, function(error) {
-  alert(error);
-});
+    else{
+      var agents = Mustache.render(templateX, data);
+    }
+    //injecting the agent-objects into the html
+    document.getElementById('agent-section').innerHTML = agents;
+  }, function(error) {
+    alert(error);
+  });
 }
 
