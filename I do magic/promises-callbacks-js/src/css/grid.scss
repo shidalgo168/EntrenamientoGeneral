@@ -10,25 +10,63 @@
 */
 
 .menu-button {
-  @media(min-width: 360px) {}
-  
   @media(min-width: 1024px) {
     display: none;
   }
 }
 
 .options {
-  @media(min-width: 360px) {}
-
   @media(min-width: 1024px) {
     display: flex;
   }
 }
 
+#agent-section {
+  @media(min-width: 768px) {
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-around;
+    padding-bottom: 50px;
+  }
+}
+
+.agent {
+  @media(min-width: 768px) {
+    width: 348px;
+  }
+  @media(min-width: 1024px) {
+    &__name {
+      left: calc(50% - 160px);
+    }
+  
+    &__ribbon {
+      left: calc(50% + 120px);
+    }
+  
+    &__separator {
+      left: calc(50% - 160px);
+    }
+  
+    &__photo {
+      left: calc(50% - 160px);
+    }
+  
+    &__description {
+      left: calc(50% - 20px);
+    }
+  
+    &__price {
+      left: calc(50% - 160px);
+    }
+  
+    &__button {
+      left: calc(50% - 4px);
+    }
+    width: calc(100% * (1/3) - 10px);
+  }
+}
 
 .image {
-  @media(min-width: 360px) {}
-
   @media(min-width: 768px) {
     height: 428px;
   }
@@ -39,8 +77,6 @@
 }
 
 .title {
-  @media(min-width: 360px) {}
-
   @media(min-width: 768px) {
     position: absolute;
     font-size: 36px;
@@ -54,14 +90,12 @@
   @media(min-width: 1024px) {
     top: 235px;
     width: 595px;
+    left: calc(50% - 33.3% - 320px/2);
   }
 }
 
 .searchbar {
-  @media(min-width: 360px) {}
-
   @media(min-width: 768px) {
-    position: absolute;
     top: 330px;
     left: 8%;
     &__textfield {
@@ -72,6 +106,7 @@
 
   @media(min-width: 1024px) {
     top: 295px;
+    left: calc(50% - 33.3% - 320px/2);
     &__textfield {
       width: 540px;
     }
@@ -79,32 +114,30 @@
 }
 
 .footer {
-  @media(min-width: 360px) {}
-
   @media(min-width: 768px) {
     height: 60px;
   }
 }
 
 .credits {
-  @media(min-width: 360px) {}
-
   @media(min-width: 768px) {
     position: absolute;
     width: auto;
-    left: 5%;
+    left: calc(50% - 33.3% - 320px/2);
     top: 40%;
     margin: 0;
   }
 }
 
-.terms {
-  @media(min-width: 360px) {}
-  
+.terms {  
   @media(min-width: 768px) {
     position: absolute;
     width: auto;
     left: 75%;
     top: 40%;
+  }
+
+  @media(min-width: 1024px) {
+    left: calc(83.3% + 15px);
   }
 }

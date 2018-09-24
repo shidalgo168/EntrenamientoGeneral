@@ -1,3 +1,7 @@
+function validateEnter(e) {
+  if (e.keyCode===13) getAgents('https://api.myjson.com/bins/uptto');
+}
+
 function get(url) {
   // Return a new promise.
   return new Promise(function(resolve, reject) {

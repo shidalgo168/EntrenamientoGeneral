@@ -28,7 +28,7 @@
     <script type="text/javascript" src="js/load-data.js"></script>
   </head>
 
-  <body>
+  <body language=JavaScript onLoad="getAgents('https://api.myjson.com/bins/uptto')">
     <!--start header-->
     <header class="header">
       <div class="logo"></div>
@@ -58,7 +58,7 @@
       <div class="image"></div>
       <div class="title">Los Mejores agentes de seguridad</div>
       <div class="searchbar">
-          <input type="text" class="searchbar__textfield" placeholder=" Buscar por Ubicación" name="Location">
+          <input type="text" class="searchbar__textfield" placeholder="Buscar por Ubicación" name="Location" onkeypress="validateEnter(event)">
           <input type="image" src="images/search.png" class="searchbar__search-button" onclick="getAgents('https://api.myjson.com/bins/uptto')">
       </div>
       <div id="agent-section">
