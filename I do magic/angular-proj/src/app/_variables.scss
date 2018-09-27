@@ -1,0 +1,47 @@
+$light-text : #8E8E8E;
+%light-border {
+  border: 1px solid #D8D8D8;
+};
+
+%app-bg {
+  background: #E5E5E5;
+};
+
+%flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+%text-common {
+  font-family: Arial;
+  font-weight: bold;
+}
+
+%menu-rectangle {
+  width: 53px;
+  height: 9px;
+  background: #FFF;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+}
+
+%options-values {
+  @extend %text-common;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+%selected-tab {
+  background: white;
+  height: 5px;
+  width: inherit;
+}

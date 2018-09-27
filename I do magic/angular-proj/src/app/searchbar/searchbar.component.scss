@@ -1,0 +1,63 @@
+@import "../_variables.scss";
+
+.searchbar {
+  position: absolute;
+  top: 380px;
+  left: calc(50% - (238px/2) - 38px);
+
+  &__textfield {
+    height: 44px;
+    width: 303px;
+    
+    background: white;
+    @extend %light-border;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  &__search-button {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    width: 30px;
+  }
+
+
+  //MEDIA QUERY
+  @media(min-width: 768px) {
+    top: 330px;
+    left: 8%;
+    &__textfield {
+      height: 44px;
+      width: 640px;
+    }
+  }
+  @media(min-width: 1024px) {
+    top: 295px;
+    left: calc(50% - 33.3% - 320px/2);
+    &__textfield {
+      width: 540px;
+    }
+  }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $light-text;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $light-text;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $light-text;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
