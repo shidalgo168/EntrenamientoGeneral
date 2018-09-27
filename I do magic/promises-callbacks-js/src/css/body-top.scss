@@ -14,7 +14,7 @@
   left: calc(50% - (238px/2) - 38px);
   top: 10px;
 
-  @extend %text-common;
+  @extend %arial-bold;
   font-size: 24px;
   color: black;
 }
@@ -27,7 +27,6 @@
   &__textfield {
     height: 44px;
     width: 303px;
-    
     background: white;
     @extend %light-border;
     box-sizing: border-box;
@@ -44,30 +43,22 @@
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: $light-text;
-  opacity: 1; /* Firefox */
-  padding-left: 25px;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
+  font-family: $arial-family;
   font-size: 18px;
-  line-height: 21px;
+  opacity: 1; /* Firefox */
+  
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: $light-text;
-  padding-left: 25px;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
+  font-family: $arial-family;
   font-size: 18px;
-  line-height: 21px;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: $light-text;
-  padding-left: 25px;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
+  font-family: $arial-family;
   font-size: 18px;
-  line-height: 21px;
 }
 
 

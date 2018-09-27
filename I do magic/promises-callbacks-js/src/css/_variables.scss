@@ -1,7 +1,9 @@
 $light-text : #8E8E8E;
+$arial-family : Arial, sans-serif;
 %light-border {
   border: 1px solid #D8D8D8;
 };
+
 
 %app-bg {
   background: #E5E5E5;
@@ -14,9 +16,14 @@ $light-text : #8E8E8E;
   justify-content: space-evenly;
 }
 
-%text-common {
-  font-family: Arial;
+%arial-bold {
+  font-family: $arial-family;
   font-weight: bold;
+}
+
+%arial-normal {
+  font-family: $arial-family;
+  font-weight: normal;
 }
 
 %menu-rectangle {
@@ -29,7 +36,7 @@ $light-text : #8E8E8E;
 }
 
 %options-values {
-  @extend %text-common;
+  @extend %arial-bold;
   font-size: 14px;
   text-align: center;
   color: white;

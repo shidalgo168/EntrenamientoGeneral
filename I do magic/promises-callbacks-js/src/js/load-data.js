@@ -1,10 +1,22 @@
-function validateEnter(e) {
-  if (e.keyCode===13) getAgents('https://api.myjson.com/bins/uptto');
-}
+const ENTER_KEY = 13;
+const URL_TO_RETIREVE_DATA = 'https://api.myjson.com/bins/uptto';
+
+// Event handlers
+window.addEventListener('load', function() {
+  getAgents(URL_TO_RETIREVE_DATA);
+});
+
+document.getElementById('lensButton').onclick = function() {
+  getAgents(URL_TO_RETIREVE_DATA);
+};
+
+document.getElementById('searchText').onkeypress = (event) => {
+  if (event.keyCode===ENTER_KEY) getAgents(URL_TO_RETIREVE_DATA);
+};
+
 
 function get(url) {
-  // Return a new promise.
-  return new Promise(function(resolve, reject) {
+  return new Promise((resolve, reject) => {
     // Do the usual XHR stuff
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url);
@@ -35,32 +47,26 @@ function get(url) {
 
 function getAgents(url){
   get(url).then(function(response) {
-    //getting mustache template
-    var templateX = document.getElementById('template').innerHTML;
+    // Getting the input of the textbox
+    var userInput = document.getElementById("searchText").value;
 
-    //getting user input
-    var userInput = document.getElementsByName("Location")[0].value;
-
-    //filtering the data
+    // Filtering the data
     var data = JSON.parse(response);
     if (userInput){
       userInput = userInput.toUpperCase();
       var newFilter = {"companies" : []};
-      for(var i = 0; i < data.companies.length; i++){
-        if(data.companies[i].name.toUpperCase().includes(userInput)){
-          newFilter.companies.push(data.companies[i]);
-        }
-      }
-      //converting the data into mustache template objects
-      var agents = Mustache.render(templateX, newFilter);
+      newFilter.companies = data.companies.filter(agent => agent.name.toUpperCase().includes(userInput));
+      var agents = Mustache.render(TEMPLATE, newFilter);
     }
     else{
-      var agents = Mustache.render(templateX, data);
+      var agents = Mustache.render(TEMPLATE, data);
     }
-    //injecting the agent-objects into the html
+    // Injecting the agent-objects into the html
     document.getElementById('agent-section').innerHTML = agents;
-  }, function(error) {
+  }, (error) => {
     alert(error);
   });
 }
+
+
 
