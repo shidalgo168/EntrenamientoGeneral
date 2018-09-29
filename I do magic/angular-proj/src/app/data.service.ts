@@ -6,9 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
+  URL_DATA = 'https://api.myjson.com/bins/uptto';
+
   constructor(private http: HttpClient) { }
 
-  getAgents() {
-    return this.http.get('https://api.myjson.com/bins/uptto');
+  public getAgents() {
+    return this.http.get(this.URL_DATA);
   }
 }

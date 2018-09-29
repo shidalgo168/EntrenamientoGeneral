@@ -8,7 +8,6 @@
   &__textfield {
     height: 44px;
     width: 303px;
-    
     background: white;
     @extend %light-border;
     box-sizing: border-box;
@@ -43,21 +42,20 @@
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: $light-text;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
+  font-family: $arial-family;
   font-size: 18px;
+  opacity: 1; /* Firefox */
+  
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: $light-text;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
+  font-family: $arial-family;
   font-size: 18px;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: $light-text;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
+  font-family: $arial-family;
   font-size: 18px;
 }

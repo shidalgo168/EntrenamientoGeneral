@@ -1,2 +1,13 @@
-<div id="agent-section">
+<div class="agent-section" *ngIf="agents$">
+  <div *ngFor="let agent of agents$" class="agent" >
+    <p class="agent__name">{{agent.name}}</p>
+    <img *ngIf="agent.isCertified" src="../../assets/certified.png" alt="ribbon" class="agent__ribbon">
+    <div class="agent__separator"></div>
+    <img class="agent__photo" src="{{agent.image}}">
+    <div class="agent__description">{{agent.description}}</div>
+    <div class="agent__price">Desde: ${{agent.rate}} / {{agent.hours}} horas</div>
+    <div class="agent__button">
+      <div class="agent__button-text">Contratar</div>
+    </div>
+  </div>
 </div>

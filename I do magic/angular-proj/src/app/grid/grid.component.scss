@@ -1,6 +1,6 @@
 @import "../_variables.scss";
 
-#agent-section {
+.agent-section {
   position: relative;
   height: fit-content;
   margin-top: 50px;
@@ -28,7 +28,7 @@
     position: absolute;
     left: 11px;
     top: 5px;
-    @extend %text-common;
+    @extend %arial-bold;
     font-size: 18px;
     margin: 0;
   }
@@ -62,8 +62,7 @@
     width: 172px;
     left: 152px;
     top: 45px;
-
-    @extend %text-common;
+    @extend %arial-bold;
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
@@ -76,8 +75,7 @@
     width: 146px;
     left: 11px;
     top: 185px;
-
-    @extend %text-common;
+    @extend %arial-bold;
     font-size: 14px;
   }
 
@@ -95,8 +93,7 @@
     position: absolute;
     left: 48px;
     top: 9px;
-
-    font-family: Arial;
+    font-family: $arial-family;
     font-size: 14px;
     text-align: center;
     line-height: 16px;

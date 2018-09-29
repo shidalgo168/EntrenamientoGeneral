@@ -22,8 +22,7 @@
   width: 238px;
   left: calc(50% - (238px/2) - 38px);
   top: 10px;
-
-  @extend %text-common;
+  @extend %arial-bold;
   font-size: 24px;
   color: black;
 
