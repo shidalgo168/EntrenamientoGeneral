@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class GridComponent implements OnInit {
 
-  agents: object = {companies:[]};
+  agents: any = {companies:[]};
 
 
   constructor(private data: DataService) { }
