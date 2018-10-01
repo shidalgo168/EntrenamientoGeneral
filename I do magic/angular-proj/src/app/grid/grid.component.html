@@ -1,5 +1,5 @@
-<div class="agent-section" *ngIf="agents$">
-  <div *ngFor="let agent of agents$" class="agent" >
+<div class="agent-section" *ngIf="agents.companies">
+  <div *ngFor="let agent of agents.companies" class="agent" >
     <p class="agent__name">{{agent.name}}</p>
     <img *ngIf="agent.isCertified" src="../../assets/certified.png" alt="ribbon" class="agent__ribbon">
     <div class="agent__separator"></div>
