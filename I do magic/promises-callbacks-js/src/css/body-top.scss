@@ -25,6 +25,9 @@
   left: calc(50% - (238px/2) - 38px);
 
   &__textfield {
+    font-family: $arial-family;
+    font-size: 18px;
+    padding-left: 30px;
     height: 44px;
     width: 303px;
     background: white;

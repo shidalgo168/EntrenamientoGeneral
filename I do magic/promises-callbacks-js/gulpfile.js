@@ -43,6 +43,7 @@ gulp.task('watch', function () {
 	gulp.watch("./src/html/**", ['html']);
 	gulp.watch("./src/images/**", ['copyImages']);
 	gulp.watch("./src/js/**", ['copyJsFiles']);
+	gulp.watch("./src/mustache/**", ['copyMustacheFiles']);
 });
 
 // HTML generation task
@@ -74,5 +75,15 @@ gulp.task('copyJsFiles', function() {
 	}));
 });
 
+// Copy all mustache files at the root level (app)
+gulp.task('copyMustacheFiles', function() {
+	gulp.src([
+		'./src/mustache/*',
+	]).pipe(gulp.dest("./dist/mustache"))
+	.pipe(reload({
+		stream: true
+	}));
+});
+
 // Default task
-gulp.task('default', ['sass', 'html', 'watch', 'serve', 'copyImages', 'copyJsFiles']);
+gulp.task('default', ['sass', 'html', 'watch', 'serve', 'copyImages', 'copyJsFiles', 'copyMustacheFiles']);

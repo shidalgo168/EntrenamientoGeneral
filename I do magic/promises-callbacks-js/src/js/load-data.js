@@ -11,7 +11,9 @@ document.getElementById('lensButton').onclick = function() {
 };
 
 document.getElementById('searchText').onkeypress = (event) => {
-  if (event.keyCode===ENTER_KEY) getAgents(URL_TO_RETIREVE_DATA);
+  if (event.keyCode===ENTER_KEY) {
+    getAgents(URL_TO_RETIREVE_DATA);
+  }
 };
 
 
@@ -56,16 +58,27 @@ function getAgents(url){
       userInput = userInput.toUpperCase();
       var newFilter = {"companies" : []};
       newFilter.companies = data.companies.filter(agent => agent.name.toUpperCase().includes(userInput));
-      var agents = Mustache.render(TEMPLATE, newFilter);
+      injectData(newFilter);
     }
     else{
-      var agents = Mustache.render(TEMPLATE, data);
+      injectData(data);
     }
     // Injecting the agent-objects into the html
-    document.getElementById('agent-section').innerHTML = agents;
+    
   }, (error) => {
     alert(error);
   });
+}
+
+function injectData(data) {
+  const TEMPLATE = fetch('../mustache/template.mustache').then(response => {return response.text();});
+  Promise.all([data, TEMPLATE]).then(response => {
+    resolvedData = response[0];
+    resolvedTemplate = response[1];
+    Mustache.parse(resolvedTemplate);
+    const output = Mustache.render(resolvedTemplate, resolvedData);
+    document.getElementById('agent-section').innerHTML = output;
+  }).catch(error => console.log('Unable to retrieve all the template data: ', error.message));
 }
 
 
