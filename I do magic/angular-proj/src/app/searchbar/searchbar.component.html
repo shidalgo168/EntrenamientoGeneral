@@ -1,4 +1,4 @@
 <div class="searchbar">
-    <input (keyup)="keyUp($event)" #searchText type="text" class="searchbar__textfield" placeholder="Buscar por Ubicación" ng-model="searchText">
-    <input id="lensButton" type="image" src="../../assets/search.png" class="searchbar__search-button">
+    <input (keyup)="keyUp($event)" #searchText type="text" class="searchbar__textfield" placeholder="Buscar por Ubicación">
+    <input (click)="lensClick()" id="lensButton" type="image" src="../../assets/search.png" class="searchbar__search-button">
 </div> 

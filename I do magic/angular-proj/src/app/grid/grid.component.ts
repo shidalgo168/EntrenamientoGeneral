@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class GridComponent implements OnInit {
 
-  agents: any = {companies:[]};
+  private agents: any = {};
 
 
   constructor(private data: DataService) { }
@@ -19,7 +19,5 @@ export class GridComponent implements OnInit {
       data => this.agents.companies = data
     );
   }
-
-
 
 }

@@ -8,7 +8,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HeroImageComponent } from './hero-image/hero-image.component';
 import { GridComponent } from './grid/grid.component';
-import { AgentsComponent } from './agents/agents.component';
 import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
@@ -18,8 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HeaderComponent,
     HeroImageComponent,
-    GridComponent,
-    AgentsComponent
+    GridComponent
   ],
   imports: [
     BrowserModule,
