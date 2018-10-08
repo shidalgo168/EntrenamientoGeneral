@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Super Agentes - Home</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+  <body>
+    <!--start header-->
+    <header class="header">
+      <div class="logo"></div>
+      <div class="menu-button">
+        <div class="menu-button__rectangle-top"></div>
+        <div class="menu-button__rectangle-mid"></div>
+        <div class="menu-button__rectangle-bottom"></div>
+      </div>
+      <div class="options">
+        <a class="options__directory" href="">
+          Directorio de Agentes
+          <div class="options__directory--selected"></div>
+        </a>
+        <a class="options__contact" href="">
+          Contacto
+          <div class="options__contact--selected"></div>
+        </a>
+        <a class="options__login" href="">
+          Ingresar
+          <div class="options__login--selected"></div>
+        </a>
+      </div>
+
+    </header>
+    <!--start body content-->
+    <div class="body-content">
+      <div class="image"></div>
+      <div class="title">Los Mejores agentes de seguridad</div>
+      <div class="searchbar">
+          <input id="searchText" type="text" class="searchbar__textfield" placeholder="Buscar por Ubicación">
+          <input id="lensButton" type="image" src="images/search.png" class="searchbar__search-button">
+      </div>
+      <div id="agent-section">
+      </div>
+    </div>
+    <!--start footer-->
+    <footer class="footer">
+      <p class="credits">Desarrollado por Akurey.com Todos los derechos reservados.</p>
+      <a href="" class="terms">Términos y Condiciones</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.min.js"></script>
+    <!--<script text="text/template" id="template" src="js/mustache.js"></script>-->
+    <script type="text/javascript" src="js/load-data.js"></script>
+
+  </body>
+</html>

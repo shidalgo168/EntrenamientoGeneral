@@ -1,0 +1,68 @@
+@import "_variables.scss";
+
+.image {
+  @extend %flex-container;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('images/banner-mobile.png');
+  height: 304px;
+}
+
+.title {
+  position: relative;
+  width: 238px;
+  left: calc(50% - (238px/2) - 38px);
+  top: 10px;
+
+  @extend %arial-bold;
+  font-size: 24px;
+  color: black;
+}
+
+.searchbar {
+  position: absolute;
+  top: 380px;
+  left: calc(50% - (238px/2) - 38px);
+
+  &__textfield {
+    font-family: $arial-family;
+    font-size: 18px;
+    padding-left: 30px;
+    height: 44px;
+    width: 303px;
+    background: white;
+    @extend %light-border;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  &__search-button {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    width: 30px;
+  }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $light-text;
+  font-family: $arial-family;
+  font-size: 18px;
+  opacity: 1; /* Firefox */
+  
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $light-text;
+  font-family: $arial-family;
+  font-size: 18px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $light-text;
+  font-family: $arial-family;
+  font-size: 18px;
+}
+
+
+
