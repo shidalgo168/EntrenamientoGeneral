@@ -1,0 +1,13 @@
+<div class="agent-section" *ngIf="agents.companies">
+  <div *ngFor="let currentAgent of agents.companies" class="agent" >
+    <p class="agent__name">{{currentAgent.name}}</p>
+    <img *ngIf="currentAgent.isCertified" src="../../assets/certified.png" alt="ribbon" class="agent__ribbon">
+    <div class="agent__separator"></div>
+    <img class="agent__photo" src="{{currentAgent.image}}">
+    <div class="agent__description">{{currentAgent.description}}</div>
+    <div class="agent__price">Desde: ${{currentAgent.rate}} / {{currentAgent.hours}} horas</div>
+    <div class="agent__button">
+      <div class="agent__button-text">Contratar</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+@import "../_variables.scss";
+
+.image {
+  @extend %flex-container;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('../../assets/banner-mobile.png');
+  height: 304px;
+
+
+  //MEDIA QUERY
+  @media(min-width: 768px) {
+    height: 428px;
+  }
+  @media(min-width: 1024px) {
+    background-image: url('../../assets/banner.png');
+  }
+}
+
+.title {
+  position: relative;
+  width: 238px;
+  left: calc(50% - (238px/2) - 38px);
+  top: 10px;
+  @extend %arial-bold;
+  font-size: 24px;
+  color: black;
+
+  //MEDIA QUERY
+  @media(min-width: 768px) {
+    position: absolute;
+    font-size: 36px;
+    line-height: 42px;
+    color: white;
+    left: 8%;
+    top: 230px;
+    width: 360px
+  }
+  @media(min-width: 1024px) {
+    top: 235px;
+    width: 595px;
+    left: calc(50% - 33.3% - 320px/2);
+  }
+}
