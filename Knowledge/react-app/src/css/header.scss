@@ -1,0 +1,77 @@
+@import "_variables.scss";
+
+.logo {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  left: 20px;
+  top: 17%;
+  background-image: url("../assets/logo.png");
+}
+
+.menu-button {
+  position: absolute;
+  width: 53px;
+  height: 43px;
+  right: 20px;
+  top: 22%;
+
+  &__rectangle-top {
+    @extend %menu-rectangle;
+    top: 0%;
+    bottom: 79.07%;
+  }
+
+  &__rectangle-mid {
+    @extend %menu-rectangle;
+    top: 39.53%;
+    bottom: 39.53%;
+  }
+
+  &__rectangle-bottom {
+    @extend %menu-rectangle;
+    top: 79.07%;
+    bottom: 0%;
+  }
+  
+  //MEDIA QUERY
+  @media(min-width: 1024px) {
+    display: none;
+  }
+}
+
+.options {
+  position: absolute;
+  width: 400px;
+  height: fit-content;
+  right: 20px;
+  top: 33%;
+  display: none;
+  @extend %flex-container;
+  &__directory {
+    @extend %options-values;
+    &--selected {
+      @extend %selected-tab;
+    }
+  }
+  &__contact {
+    @extend %options-values;
+    &--selected {
+      display: none;
+      @extend %selected-tab;
+    }
+  }
+  &__login {
+    padding-left: 20px;
+    @extend %options-values;
+    &--selected {
+      display: none;
+      @extend %selected-tab;
+    }
+  }
+
+  //MEDIA QUERY
+  @media(min-width: 1024px) {
+    display: flex;
+  }
+}
