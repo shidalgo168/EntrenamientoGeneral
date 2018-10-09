@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header'
 import HeroImage from './components/HeroImage';
-import Grid from './components/Grid';
 import Footer from './components/Footer';
 import './App.scss';
 
@@ -16,9 +15,6 @@ class App extends Component {
         <div className="body-content">
           <div>
             <HeroImage />
-          </div>
-          <div>
-            <Grid />
           </div>
         </div>
         <footer className="footer">

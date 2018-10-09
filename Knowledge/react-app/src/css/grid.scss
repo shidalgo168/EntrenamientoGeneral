@@ -17,7 +17,6 @@
   }
 }
 
-
 .agent {
   position: relative;
   height: 250px;
@@ -34,7 +33,9 @@
   }
 
   &__ribbon {
+    background-image: url("../assets/certified.png");
     position: absolute;
+    background-size: 35px 32px;
     width: 32px;
     height: 29px;
     left: 296px;
