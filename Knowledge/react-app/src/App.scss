@@ -1,0 +1,25 @@
+.header {
+  position: relative;
+  height: 77px;
+  left: 0%;
+  right: 0%;
+  top: 0;
+  background: black;
+}
+
+.body-content {
+  position: relative;
+  min-height: 700px;
+  background: white;
+}
+
+.footer {
+  position: relative;
+  height: 88px;
+  background: black;
+
+  //MEDIA QUERY
+  @media(min-width: 768px) {
+    height: 60px;
+  }
+}
