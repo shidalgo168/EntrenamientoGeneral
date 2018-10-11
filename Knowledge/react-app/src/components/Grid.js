@@ -9,7 +9,7 @@ class Grid extends Component {
           <p className="agent__name">{this.props.data.name}</p>
           <div alt="ribbon" className="agent__ribbon"/>
           <div className="agent__separator"></div>
-          <img className="agent__photo" src="{this.props.data.image}"/>
+          <img alt="AgentCertified" className="agent__photo" src="{this.props.data.image}"/>
           <div className="agent__description">{this.props.data.description}</div>
           <div className="agent__price">Desde: ${this.props.data.rate} / {this.props.data.hours} horas</div>
           <div className="agent__button">
@@ -22,7 +22,7 @@ class Grid extends Component {
       <div className="agent">
         <p className="agent__name">{this.props.data.name}</p>
         <div className="agent__separator"></div>
-        <img className="agent__photo" src="{this.props.data.image}"/>
+        <img alt="NormalAgent" className="agent__photo" src="{this.props.data.image}"/>
         <div className="agent__description">{this.props.data.description}</div>
         <div className="agent__price">Desde: ${this.props.data.rate} / {this.props.data.hours} horas</div>
         <div className="agent__button">
