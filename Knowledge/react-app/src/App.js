@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Header from './components/Header'
 import HeroImage from './components/HeroImage';
 import Footer from './components/Footer';
-import './App.scss';
+import './css/app.scss';
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <header className="header">
           <Header />
         </header>
